@@ -15,7 +15,7 @@
 
 ### Prerequisites
 
-- Go 1.18 or later
+- Go 1.20 or later
 
 ### Installation
 
