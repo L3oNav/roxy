@@ -22,7 +22,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/roxy.git
+    git clone git@github.com:L3oNav/roxy.git
     cd roxy
     ```
 
@@ -43,8 +43,8 @@ Roxy uses a TOML configuration file to define server settings and routing rules.
 name = "roxy"
 logfile = "logs/access.log"
 loglevel = "debug"
-listen = ["127.0.0.1:3312"]
 max_connections = 1024
+listen = ["127.0.0.1:8100", "192.168.1.2:8100"]
 
 [[match]]
 uri = "/"
@@ -58,6 +58,7 @@ forward = [
     { address = "127.0.0.1:8081", weight = 3 },
     { address = "127.0.0.1:8082", weight = 2 },
 ]
+
 ```
 
 ### Usage
